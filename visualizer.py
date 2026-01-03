@@ -66,7 +66,7 @@ pl.add_mesh(
     scalars="error",
     cmap=cc.cm.fire_r,
     clim=(ERROR_MIN, ERROR_MAX),
-    point_size=12,
+    point_size=15,
     render_points_as_spheres= False
 )
 pl.remove_scalar_bar()
