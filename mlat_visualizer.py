@@ -5,16 +5,19 @@ import colorcet as cc
 from matplotlib import colors
 
 # if target point is constrained to 0 <= x <= 1, etc.
+
 references = np.array([
-    [0, 0, 0],
-    [1, 0, 1],
-    [0, 1, 1],
-    [1, 1, 0]
-])
+    [0.0, 0.0, 0.0],
+    [1.0, 0.0, 0.0],
+    [0.0, 1.0, 0.0],
+    [0.0, 0.0, 1.0],
+], dtype=np.float64)
 
-true_point = np.array([0.5, 0.5, 0.5])
-estimated_point = np.array([0.5, 0.5, 0.0])
+true_point = np.array([0.5, 0.5, 0.5], dtype=np.float64)
 
+ranges = cmake_mlat.find_ranges(true_point, references)
+
+print(ranges)
 
 pl = pv.Plotter()
 pl.show_grid()
