@@ -20,16 +20,16 @@ class ErrorField:
 
 field = ErrorField()
 ERROR_MIN = 0.0
-ERROR_MAX = 1.0053497077208614e-15
+ERROR_MAX = 6.377745716588144e-16
 
 norm = colors.Normalize(vmin=ERROR_MIN, vmax=ERROR_MAX)
-cmap = cc.cm.fire
+cmap = cc.cm.fire_r
 
 references = np.array([
     [0, 0, 0],
-    [1, 0, 1],
-    [0, 1, 1],
-    [1, 1, 0]
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1]
 ])
 
 pl = pv.Plotter()
@@ -83,7 +83,7 @@ scalar_bar.SetPosition(0.85, 0.1)
 
 #Final Setups
 pl.camera_position = [
-    (4, 2.75, 2.25),
+    (4, 2.5, 2.25),
     (0.5, 0.5, 0.5),    # focal point
     (0, 0, 1)
 ]
